@@ -30,10 +30,10 @@ def find_canonical_beautiful_soup(url):
     return None
 
 
-def scrap(url):
-    print ('work!')
-    og = opengraph.OpenGraph(url=url)
-    db.update(url, og)
+def scrap(url_):
+    print ('work!' + url_)
+    og = opengraph.OpenGraph(url=url_)
+    db.update(url_, og)
     print (og)
 
 def worker():
