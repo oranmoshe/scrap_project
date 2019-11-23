@@ -26,15 +26,15 @@ def find_canonical_beautiful_soup(url):
             canonical = soup.find('link', {'rel': 'canonical'})
         return canonical['href']
     except requests.exceptions.RequestException as e:
-        print e
+        print (e)
     return None
 
 
 def scrap(url):
-    print 'work!'
+    print ('work!')
     og = opengraph.OpenGraph(url=url)
     db.update(url, og)
-    print og
+    print (og)
 
 def worker():
     while True:

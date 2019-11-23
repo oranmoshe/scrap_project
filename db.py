@@ -14,7 +14,7 @@ def update(url,graph):
     if(not graph.is_valid()):
         return  None
     for x,y in graph.items():
-        print "%-15s => %s" % (x, y)
+        print ("%-15s => %s" % (x, y))
         if(x=='url'):
             m.url = y
         if(x=='type'):
