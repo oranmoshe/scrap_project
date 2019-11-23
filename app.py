@@ -5,11 +5,13 @@ app = Flask(__name__)
 
 @app.route('/stories', methods=['GET'])
 def stories_get():
+    print 'new get request'
     return controller.get_metadata(request.args.get('id')).toJSON()
 
 
 @app.route('/stories', methods=['POST'])
 def stories_post():
+    print 'new post request'
     return controller.get_id(request.args.get('url'))
 
 errors = Blueprint('errors', __name__)
